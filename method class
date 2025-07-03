@@ -1,0 +1,42 @@
+using System;
+
+namespace MathOperationApp
+{
+    // Define a class named MathOperations
+    public class MathOperations
+    {
+        // Void method that takes two integers as parameters
+        // Performs a math operation on the first integer
+        // and displays the second integer to the console
+        public void PerformOperation(int number1, int number2)
+        {
+            // Multiply the first number by 2 and store the result
+            int result = number1 * 2;
+
+            // Display the result of the operation on the first integer
+            Console.WriteLine($"Result after operation on first integer: {result}");
+
+            // Display the second integer as-is
+            Console.WriteLine($"Second integer displayed as-is: {number2}");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Instantiate the MathOperations class
+            MathOperations mathOps = new MathOperations();
+
+            // Call the PerformOperation method, passing two numbers by position
+            mathOps.PerformOperation(5, 10);
+
+            // Call the PerformOperation method, specifying parameters by name
+            mathOps.PerformOperation(number2: 20, number1: 7);
+
+            // Keep the console window open until a key is pressed
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
